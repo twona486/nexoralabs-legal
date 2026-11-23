@@ -13,11 +13,374 @@ h1 { line-height: 1.3; }
 h2 { margin-top: 2rem; }
 table { display: block; overflow-x: auto; border-collapse: collapse; }
 th, td { border: 1px solid #cfd8e3; padding: .55rem; text-align: left; vertical-align: top; min-width: 6rem; }
+details { margin-top: 2rem; border: 1px solid #cfd8e3; padding: 1rem; }
+summary { cursor: pointer; font-weight: 700; }
 </style>
 </head>
 <body>
 <header><p>Nexora Labs · Project RECLAIM</p><nav aria-label="법적 문서"><a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a> · <a href="data-deletion.html">데이터 삭제 안내</a></nav></header>
-<main><div class="markdown-heading"><h1 class="heading-element">Project RECLAIM 개인정보처리방침</h1><a id="user-content-project-reclaim-개인정보처리방침" class="anchor" aria-label="Permalink: Project RECLAIM 개인정보처리방침" href="#project-reclaim-개인정보처리방침"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<main>
+<h1>Project RECLAIM 개인정보 처리방침</h1>
+<p>넥소라랩스(Nexora Labs)는 Android 게임 Project RECLAIM을 운영하며, 「개인정보 보호법」 제30조에 따라 개인정보 처리와 권리 행사 방법을 안내합니다.</p>
+<h2>주요 개인정보 처리 표시</h2>
+<table>
+<thead>
+<tr>
+<th>표시</th>
+<th>주요 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>📋 <a href="#processing">처리 항목과 목적</a></td>
+<td>익명 계정 ID와 게임 진행은 로그인 및 저장에, 앱 이용 기록은 서비스 분석에 사용합니다.</td>
+</tr>
+<tr>
+<td>⏳ <a href="#retention">보유 기간과 파기</a></td>
+<td>익명 계정과 클라우드 세이브는 계정 삭제 또는 서비스 종료 시까지 보관합니다.</td>
+</tr>
+<tr>
+<td>🌐 <a href="#transfers">처리 위탁과 국외 이전</a></td>
+<td>Google Firebase로 인증과 저장을 처리합니다. Firebase 인증 데이터는 미국에서 처리됩니다.</td>
+</tr>
+<tr>
+<td>⚙️ <a href="#collection">자동 수집과 광고</a></td>
+<td>Firebase Analytics와 Google AdMob SDK를 사용합니다. 게임의 보상형 광고는 아동 대상 설정으로 요청합니다.</td>
+</tr>
+<tr>
+<td>✉️ <a href="#contact">열람·삭제 및 개인정보 문의</a></td>
+<td>넥소라랩스 개인정보 담당 <a href="mailto:cs@nexoralabs.io">cs@nexoralabs.io</a></td>
+</tr>
+</tbody>
+</table>
+<h2>목차</h2>
+<ol>
+<li><a href="#processing">개인정보의 처리 목적 및 항목</a></li>
+<li><a href="#children">만 14세 미만 아동의 개인정보 처리</a></li>
+<li><a href="#retention">개인정보의 처리 및 보유 기간</a></li>
+<li><a href="#deletion">개인정보의 파기 절차 및 방법</a></li>
+<li><a href="#disclosure">개인정보의 제3자 제공</a></li>
+<li><a href="#processors">개인정보 처리업무의 위탁</a></li>
+<li><a href="#transfers">개인정보의 국외 이전</a></li>
+<li><a href="#security">개인정보의 안전성 확보조치</a></li>
+<li><a href="#collection">개인정보 자동 수집 장치의 설치·운영 및 거부</a></li>
+<li><a href="#behavior">제3자의 행태정보 수집·이용 및 거부</a></li>
+<li><a href="#rights">정보주체와 법정대리인의 권리·의무 및 행사방법</a></li>
+<li><a href="#contact">개인정보 보호책임자 및 열람청구 접수</a></li>
+<li><a href="#remedies">정보주체의 권익침해 구제방법</a></li>
+<li><a href="#changes">개인정보 처리방침의 변경</a></li>
+</ol>
+<p><a id="processing"></a></p>
+<h2>1. 개인정보의 처리 목적 및 항목</h2>
+<p>가입 양식 없이 설치에서 익명 계정을 만듭니다. 익명 로그인에 이름, 이메일 주소, 전화번호 입력이 필요하지 않습니다. 마케팅 수신 신청은 받지 않으며 광고성 이메일이나 문자를 발송하지 않습니다.</p>
+<table>
+<thead>
+<tr>
+<th>처리 업무</th>
+<th>처리 항목과 수집 방법</th>
+<th>처리 목적 및 근거</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>익명 로그인</td>
+<td>Firebase Authentication이 자동 생성하는 익명 UID와 인증 토큰, 접속 IP 주소, SDK·플랫폼이 포함된 사용자 에이전트</td>
+<td>이용계약 이행을 위한 로그인과 저장 접근 제어, 로그인 보호(「개인정보 보호법」 제15조 제1항 제4호)</td>
+</tr>
+<tr>
+<td>클라우드 저장</td>
+<td>앱에서 자동 전송하는 익명 UID, 세이브 데이터, 저장본 변경 번호, 서버 수정 시각, SDK 사용자 에이전트</td>
+<td>이용계약 이행을 위한 게임 진행 저장·동기화와 충돌 확인(같은 법 제15조 제1항 제4호)</td>
+</tr>
+<tr>
+<td>이용 분석</td>
+<td>Firebase Analytics가 자동 수집하는 앱 인스턴스 ID, 앱·OS·기기 정보, IP 기반 대략적인 지역, 세션·앱 이용 기록, 구매 이벤트 및 앱에서 전송하는 게임 이벤트</td>
+<td>이용 흐름과 서비스 품질 분석. 자동 수집과 거부 방법은 제9항 참조</td>
+</tr>
+<tr>
+<td>보상형 광고 및 개인정보 선택 관리</td>
+<td>AdMob 및 UMP가 자동 처리하는 IP 주소와 대략적인 지역, 앱·기기 정보, 앱 세트 ID 등 사용 가능한 식별자, 광고 요청·노출·클릭·시청 기록, 진단 정보, 광고 개인정보 선택 상태</td>
+<td>보상형 광고 제공·측정, 부정 이용 방지, 개인정보 선택 관리. 제9~10항 참조</td>
+</tr>
+<tr>
+<td>인앱 상품 구매·복원</td>
+<td>앱의 Google Play Billing 연동에서 처리하는 상품 ID, 구매 상태, 주문 정보 및 구매 확인 토큰</td>
+<td>이용자가 요청한 결제 확인, 상품 지급 및 구매 복원(같은 법 제15조 제1항 제4호)</td>
+</tr>
+<tr>
+<td>고객 문의 및 권리 행사</td>
+<td>이메일로 보내는 연락 이메일, 요청 내용, 이용자가 제공한 익명 UID 및 본인·대리인 확인에 필요한 정보</td>
+<td>문의 응답과 계약 이행(같은 법 제15조 제1항 제4호), 법령에 따른 권리 요청 처리(같은 항 제2호)</td>
+</tr>
+</tbody>
+</table>
+<p>클라우드 세이브에는 층, 직위, 자원, 영웅, 장비, 건물, 해금 및 튜토리얼 진행, 오프라인 보상과 광고 배수 사용, 플레이 통계와 시각, 앱 및 데이터 버전이 포함됩니다. 구매 영수증, 결제 수단 및 원문 로그인 토큰은 클라우드 세이브에 담지 않습니다.</p>
+<p>게임 분석 이벤트에는 첫 실행, 튜토리얼 단계, 10층 단위 첫 돌파, 구역 수복, 보스 실패·격파, 챕터 클리어, 오프라인 보상과 광고 배수 적용, 상점 열기 및 확정 구매 상품 ID가 포함됩니다. 게임에서 전송하는 분석 이벤트에는 익명 로그인 UID와 세이브 원문이 포함되지 않습니다.</p>
+<p>카드 등 결제 수단과 청구 정보는 Google Play 결제 서비스에서 처리합니다. 게임은 Unity IAP를 통해 Google Play의 거래 승인·복원에 필요한 정보에 접근합니다. <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&amp;ldt=privacynotice&amp;ldl=ko">Google Payments 개인정보처리방침</a></p>
+<p><a id="children"></a></p>
+<h2>2. 만 14세 미만 아동의 개인정보 처리</h2>
+<p>국내 콘텐츠 등급은 12세 이용가를 기준으로 준비하고 있습니다. 익명 로그인에서 생년월일을 받지 않습니다. 만 14세 미만 아동의 개인정보 처리에 법령상 동의가 필요한 경우에는 법정대리인의 동의를 받고 그 동의 여부를 확인해야 합니다. 법정대리인은 <a href="mailto:cs@nexoralabs.io">개인정보 담당 이메일</a>로 아동의 개인정보 열람, 정정·삭제, 처리정지 및 동의 철회를 요청할 수 있습니다. 광고 SDK에는 아동 대상 처리를 적용합니다. 자세한 내용은 제10항에서 확인할 수 있습니다.</p>
+<p><a id="retention"></a></p>
+<h2>3. 개인정보의 처리 및 보유 기간</h2>
+<table>
+<thead>
+<tr>
+<th>처리 업무</th>
+<th>보유·이용 기간</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>익명 계정과 클라우드 세이브</td>
+<td>계정 삭제 또는 서비스 종료 시까지. Firebase 인증 시스템의 삭제 일정과 접속 IP의 보관 기간은 제7항 참조</td>
+</tr>
+<tr>
+<td>문의·권리 요청</td>
+<td>요청 처리 완료 시까지. 아래 법정 보존 의무가 적용되는 기록은 그 기간까지</td>
+</tr>
+<tr>
+<td>이용 분석</td>
+<td>Analytics 속성에 설정된 사용자·이벤트 보관 기간. 일반 GA4 속성의 설정 범위는 2개월 또는 14개월이며 해당 기간은 표준 집계 보고서에 적용되지 않습니다.</td>
+</tr>
+<tr>
+<td>광고·개인정보 선택 및 Google Play 구매</td>
+<td>Google 측 처리와 보관은 제7항에 따릅니다. 운영자가 보유하는 거래기록은 적용되는 법정 보존 기간까지 보관합니다.</td>
+</tr>
+</tbody>
+</table>
+<p>「전자상거래 등에서의 소비자보호에 관한 법률」 제6조 및 같은 법 시행령 제6조에 따른 보존 의무가 적용되는 기록은 다음과 같습니다.</p>
+<table>
+<thead>
+<tr>
+<th>보존 기록</th>
+<th>기간</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>계약 또는 청약철회에 관한 기록</td>
+<td>5년</td>
+</tr>
+<tr>
+<td>대금결제 및 재화 등의 공급에 관한 기록</td>
+<td>5년</td>
+</tr>
+<tr>
+<td>소비자 불만 또는 분쟁처리에 관한 기록</td>
+<td>3년</td>
+</tr>
+<tr>
+<td>표시·광고에 관한 기록</td>
+<td>6개월</td>
+</tr>
+</tbody>
+</table>
+<p><a id="deletion"></a></p>
+<h2>4. 개인정보의 파기 절차 및 방법</h2>
+<p>보유기간이 끝나거나 처리 목적이 달성되어 개인정보가 불필요해지면 지체 없이 파기합니다. 법령에 따라 보존해야 하는 기록은 다른 정보와 분리하고 법정 보존 목적에 한해 사용한 후 기간이 끝나면 파기합니다. 전자 파일은 복구하거나 재생하기 어려운 방법으로 삭제하며, 종이 기록은 파쇄합니다.</p>
+<p>앱의 계정 삭제 기능은 클라우드 세이브, 익명 인증 계정 및 현재 기기의 게임 저장 파일을 삭제합니다. 분석 식별자 초기화는 이미 전송한 분석·광고 데이터의 삭제와 별개입니다. <a href="data-deletion.html">데이터 삭제 안내</a></p>
+<p><a id="disclosure"></a></p>
+<h2>5. 개인정보의 제3자 제공</h2>
+<p>운영자는 개인정보를 제1항의 목적 범위에서 처리하며, 별도 동의나 법률의 특별한 규정 등 「개인정보 보호법」 제17조 또는 제18조에 해당하는 경우에만 제3자에게 제공합니다.</p>
+<p>Google이 광고 제공·측정·부정 이용 방지 또는 결제·환불 등 자체 목적으로 직접 처리하는 데이터에는 해당 서비스의 개인정보처리방침이 적용됩니다. 앱의 SDK나 결제 화면에서 Google로 전송되는 항목은 아래 국외 이전 표에서 확인할 수 있습니다. <a href="https://policies.google.com/technologies/partner-sites?hl=ko">Google 파트너 서비스의 데이터 사용</a> · <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&amp;ldt=privacynotice&amp;ldl=ko">Google Payments 개인정보처리방침</a></p>
+<p><a id="processors"></a></p>
+<h2>6. 개인정보 처리업무의 위탁</h2>
+<table>
+<thead>
+<tr>
+<th>수탁자</th>
+<th>위탁 업무</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google LLC (Firebase Authentication, Cloud Firestore)</td>
+<td>익명 로그인, 인증 관리, 클라우드 세이브 보관·동기화</td>
+</tr>
+<tr>
+<td>Google LLC (Google Analytics for Firebase)</td>
+<td>앱 이용 측정 및 분석 보고서 제공</td>
+</tr>
+<tr>
+<td>Google LLC (AdMob, UMP)</td>
+<td>보상형 광고 요청·측정 및 광고 개인정보 선택 관리 중 운영자를 대신해 처리하는 업무</td>
+</tr>
+</tbody>
+</table>
+<p>운영자는 「개인정보 보호법」 제26조에 따라 위탁 업무의 범위, 목적 외 처리 제한, 안전조치, 재위탁 제한과 감독에 관한 조건을 적용하고 수탁자의 처리 현황을 확인합니다. 위탁 업무나 수탁자가 바뀌면 이 방침에 공개합니다. Google Play 결제 서비스의 자체 결제·환불 처리는 제5항과 제7항을 참고하세요.</p>
+<p><a id="transfers"></a></p>
+<h2>7. 개인정보의 국외 이전</h2>
+<p>익명 로그인에 필요한 국외 처리위탁은 「개인정보 보호법」 제28조의8 제1항 제3호(계약 이행을 위한 처리위탁·보관)를 근거로 합니다. 별도 동의를 근거로 하는 국외 이전은 같은 항 제1호에 따라 이전 전에 동의를 받아야 합니다.</p>
+<p>Firestore의 게임 저장 데이터 보관 위치는 대한민국 서울(<code>asia-northeast3</code>)을 기준으로 계획하고 있습니다. Firebase Authentication의 인증 데이터는 미국에서 처리됩니다. Google은 정보가 거주 국가 밖에서 처리될 수 있다고 안내합니다. Analytics·AdMob·Google Play의 Project RECLAIM 운영 구성에 해당하는 전체 처리 국가는 출시 전에 확인합니다. <a href="https://firebase.google.com/docs/firestore/locations">Firestore 리전</a> · <a href="https://firebase.google.com/support/privacy">Firebase 처리 위치</a> · <a href="https://datacenters.google/locations/">Google 데이터센터 위치</a></p>
+<table>
+<thead>
+<tr>
+<th>이전 유형 및 서비스</th>
+<th>이전받는 자 및 연락처</th>
+<th>이전 국가</th>
+<th>이전 시기 및 방법</th>
+<th>이전 항목과 이용 목적</th>
+<th>보유·이용 기간</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>처리위탁 · Firebase Authentication</td>
+<td>Google LLC · <a href="https://firebase.google.com/support">Firebase 지원</a></td>
+<td>미국</td>
+<td>앱 최초 인증 및 로그인·갱신 요청 시 암호화된 네트워크 전송</td>
+<td>익명 UID, 인증 토큰, IP, 사용자 에이전트로 로그인 유지 및 보호</td>
+<td>계정 삭제 요청까지. Google은 기록한 IP를 수 주간 보관하며, 기타 인증 정보는 삭제 개시 후 활성·백업 시스템에서 180일 이내 제거합니다.</td>
+</tr>
+<tr>
+<td>처리위탁 · Google Analytics for Firebase</td>
+<td>Google LLC · <a href="https://support.google.com/analytics/">Analytics 도움말</a></td>
+<td>Google의 글로벌 인프라(서비스별 처리 국가 확인 중)</td>
+<td>앱 실행과 세션·이벤트 전송 시 암호화된 네트워크 전송</td>
+<td>앱 인스턴스 ID, 기기·앱 정보, 대략적인 지역 및 이용·구매 이벤트로 사용 흐름과 품질 분석</td>
+<td>제3항의 Analytics 속성 설정 기간. <a href="https://support.google.com/analytics/answer/7667196?hl=ko">Analytics 보관 정책</a></td>
+</tr>
+<tr>
+<td>SDK 전송 · AdMob 및 UMP</td>
+<td>Google LLC · <a href="https://support.google.com/admob/">AdMob 도움말</a></td>
+<td>Google의 글로벌 인프라(서비스별 처리 국가 확인 중)</td>
+<td>초기 개인정보 선택 상태 확인, 광고 로드 및 광고 이용 시 암호화된 네트워크 전송</td>
+<td>IP·대략적인 지역, 기기·앱 정보 및 식별자, 광고 이용 기록, 진단·개인정보 선택 상태로 광고 제공·측정, 부정 방지 및 선택 관리</td>
+<td>데이터 유형 및 목적에 따른 <a href="https://policies.google.com/technologies/retention?hl=ko">Google 보관 정책</a> 적용</td>
+</tr>
+<tr>
+<td>결제 서비스 직접 처리 · Google Play</td>
+<td>Google LLC · <a href="https://support.google.com/googleplay/">Google Play 고객센터</a></td>
+<td>Google의 글로벌 인프라(서비스별 처리 국가 확인 중)</td>
+<td>구매·복원 및 거래 확인 시 Google Play와 암호화된 네트워크 통신</td>
+<td>Google 계정 및 Google에 제공하는 결제·청구 정보, 상품·거래 정보로 결제, 복원, 환불과 분쟁 처리</td>
+<td><a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&amp;ldt=privacynotice&amp;ldl=ko">Google Payments 개인정보처리방침</a> 및 적용 법령에 따릅니다.</td>
+</tr>
+</tbody>
+</table>
+<p>Google LLC의 우편 문의 주소는 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA입니다. Firebase의 재수탁 업체와 업무·소재지는 <a href="https://firebase.google.com/terms/subprocessors">Firebase 재수탁자 목록</a>에서 확인할 수 있습니다. <a href="https://policies.google.com/terms?hl=ko_kr">Google 서비스 약관</a></p>
+<p>Google LLC의 우편 문의 주소는 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA입니다. Firebase의 재수탁 업체와 업무·소재지는 <a href="https://firebase.google.com/terms/subprocessors">Firebase 재수탁자 목록</a>에서 확인할 수 있습니다. <a href="https://policies.google.com/terms?hl=ko_kr">Google 서비스 약관</a></p>
+<p>국외 이전에 대한 거부·철회 문의는 <a href="mailto:cs@nexoralabs.io">cs@nexoralabs.io</a>로 접수합니다. 익명 인증의 국외 이전을 거부하면 인증과 연결된 클라우드 저장 기능을 이용할 수 없습니다. 앱의 계정 삭제 기능이나 이메일로 기존 계정 삭제를 요청할 수 있습니다. 분석에는 앱 내 별도 차단 기능이 없으므로 향후 앱 사용 중단 또는 앱 제거로 그 설치의 추가 전송을 중단할 수 있습니다. 광고 개인정보 설정에서 제공하는 선택은 제9항에 안내합니다. 광고를 시청하지 않아도 앱 시작 시 개인정보 선택 확인과 광고 요청이 이루어질 수 있습니다. 구매를 진행하지 않으면 구매 결제를 위한 정보 제공이 발생하지 않으며 유료 상품은 지급되지 않습니다.</p>
+<p><a id="security"></a></p>
+<h2>8. 개인정보의 안전성 확보조치</h2>
+<p>Firebase 인증을 이용하여 이용자의 클라우드 저장 요청을 확인하고, Firestore 보안 규칙으로 해당 UID의 저장 데이터에 대한 접근을 제한합니다. Firebase 및 Google SDK 통신에는 암호화된 연결을 사용합니다. 운영상 데이터 접근은 업무상 필요한 범위로 제한합니다.</p>
+<p><a id="collection"></a></p>
+<h2>9. 개인정보 자동 수집 장치의 설치·운영 및 거부</h2>
+<p>앱은 브라우저 쿠키 대신 모바일 SDK를 사용합니다. Firebase Analytics는 앱 인스턴스 ID와 세션·이벤트 등을 자동 수집합니다. 앱 내 분석 수집 스위치는 제공하지 않습니다. 앱 사용을 중단하거나 제거하면 해당 설치에서 이후 수집이 멈추며, 이미 전송된 정보에 대한 문의와 권리 요청은 <a href="mailto:cs@nexoralabs.io">cs@nexoralabs.io</a>로 접수합니다.</p>
+<p>Android 앱은 Google Play 서비스 광고 ID 및 Android AdServices 광고 ID 접근 권한을 제거하도록 구성되어 있습니다. AdMob은 앱 세트 ID 등 사용 가능한 다른 식별자를 광고 운영과 부정 방지에 사용할 수 있습니다. 기기의 <strong>설정 → 개인정보 보호 → 광고</strong>에서 Android 광고 ID를 삭제하거나 재설정할 수 있습니다. 경로는 기기 버전에 따라 다르며 이 설정은 앱 인스턴스 ID나 앱 세트 ID 사용을 차단하지 않습니다.</p>
+<p>UMP가 개인정보 선택 메뉴를 요구하는 지역에서는 <strong>게임 설정 → 광고 개인정보 설정</strong>에서 제공되는 선택을 변경할 수 있습니다. 제공되는 선택은 지역과 폼 설정에 따라 다릅니다. 광고를 이용할 수 없는 경우 보상형 광고 배수만 제한됩니다. <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Google 모바일 광고 SDK의 자동 수집 항목</a></p>
+<p><a id="behavior"></a></p>
+<h2>10. 제3자의 행태정보 수집·이용 및 거부</h2>
+<table>
+<thead>
+<tr>
+<th>수집 주체</th>
+<th>행태정보 및 수집 방법</th>
+<th>목적 및 보관</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google LLC (AdMob)</td>
+<td>광고 요청, 노출, 탭, 영상 시청·완료 등 상호작용을 SDK로 수집</td>
+<td>보상형 광고 제공, 성과 측정, 부정 이용 방지. <a href="https://policies.google.com/technologies/retention?hl=ko">Google 보관 정책</a> 적용</td>
+</tr>
+<tr>
+<td>Google LLC (Firebase Analytics)</td>
+<td>앱 기동·세션, 게임 내 활동과 구매 이벤트를 SDK로 수집</td>
+<td>앱 이용 흐름 및 서비스 품질 분석. 제3항 참조</td>
+</tr>
+</tbody>
+</table>
+<p>게임의 보상형 광고 요청에는 AdMob의 아동 대상 설정을, UMP에는 동의 가능 연령 미만 설정을 적용합니다. 이 설정의 보상형 광고에는 행태정보에 기반한 맞춤형 광고를 요청하지 않습니다. 앱이 측정을 위해 수집하는 활동 및 광고 기록에 관한 거부 방법은 제9항을 참고하세요. <a href="https://developers.google.com/admob/unity/targeting">Google 아동 대상 광고 처리</a></p>
+<p><a id="rights"></a></p>
+<h2>11. 정보주체와 법정대리인의 권리·의무 및 행사방법</h2>
+<p>이용자는 개인정보 열람, 정정·삭제, 처리정지 및 동의 철회를 요청할 수 있습니다. 법정대리인 또는 위임받은 대리인도 권리를 행사할 수 있습니다. 운영자는 이메일로 요청을 접수하여 본인 또는 대리 권한을 확인한 뒤 지체 없이 조치하고 결과 또는 제한 사유를 알려 드립니다. 결과에 이의가 있으면 같은 이메일로 재검토를 요청할 수 있습니다. 결과에 이의가 있으면 같은 이메일로 재검토를 요청할 수 있습니다. 위임을 받은 경우 관련 고시의 위임장을 요청할 수 있습니다. 법령에 따라 열람·처리정지 등이 제한되거나 보존 의무가 있는 정보의 삭제가 제한될 수 있습니다.</p>
+<ul>
+<li><strong>게임에서 삭제</strong> · 설정 → 계정 및 데이터 삭제 → 계속 → 영구 삭제를 선택하고 완료 안내를 확인합니다.</li>
+<li><strong>이메일로 요청</strong> · <a href="mailto:cs@nexoralabs.io">cs@nexoralabs.io</a>로 요청 내용과 알고 있는 경우 익명 계정 ID를 보냅니다. 앱의 삭제 화면에서 <strong>삭제 요청용 계정 ID 복사</strong>를 사용할 수 있습니다. 익명 계정은 이메일에 연결되어 있지 않아 추가 확인이 필요할 수 있습니다. 인증 토큰, 비밀번호, 카드 정보는 보내지 마세요.</li>
+</ul>
+<p>Google Play 구매 내역, Google 계정 정보 및 환불 요청은 <a href="https://support.google.com/googleplay/">Google Play 고객센터</a>에서 확인할 수 있습니다. <a href="data-deletion.html">데이터 삭제 안내</a></p>
+<p><a id="contact"></a></p>
+<h2>12. 개인정보 보호책임자 및 열람청구 접수</h2>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>담당</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>사업자</td>
+<td>넥소라랩스(Nexora Labs), 대표자 조형재, 사업자등록번호 752-02-04120</td>
+</tr>
+<tr>
+<td>개인정보 보호책임자</td>
+<td>조형재(대표)</td>
+</tr>
+<tr>
+<td>열람청구 접수·처리 및 개인정보 고충 처리</td>
+<td>넥소라랩스 개인정보 담당 · <a href="mailto:cs@nexoralabs.io">cs@nexoralabs.io</a></td>
+</tr>
+</tbody>
+</table>
+<p><a id="remedies"></a></p>
+<h2>13. 정보주체의 권익침해 구제방법</h2>
+<table>
+<thead>
+<tr>
+<th>기관</th>
+<th>연락처</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>개인정보침해 신고센터</td>
+<td>국번 없이 118 · <a href="https://privacy.kisa.or.kr/">신고센터</a></td>
+</tr>
+<tr>
+<td>개인정보분쟁조정위원회</td>
+<td>1833-6972 · <a href="https://www.kopico.go.kr/">분쟁조정위원회</a></td>
+</tr>
+<tr>
+<td>경찰청</td>
+<td>국번 없이 182 · <a href="https://ecrm.police.go.kr/">사이버범죄 신고시스템</a></td>
+</tr>
+</tbody>
+</table>
+<p><a id="changes"></a></p>
+<h2>14. 개인정보 처리방침의 변경</h2>
+<p>이 개인정보 처리방침은 <strong>2026년 11월 24일</strong>부터 적용됩니다. 방침이 바뀌면 이 페이지에 변경 내용과 시행일을 안내합니다. 처리 항목이나 목적 등 권리에 중요한 영향을 미치는 변경은 적용 전 또는 적용 즉시 변경 전후를 확인할 수 있도록 게시합니다.</p>
+<p><a href="#previous-policy">이전 방침 보기(2026년 11월 23일 적용)</a></p>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>이전</th>
+<th>개정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>자동 수집과 광고</td>
+<td>SDK 수집 및 광고 개인정보 메뉴를 함께 안내</td>
+<td>광고 ID 권한 제거, 아동 대상 광고 설정, 앱 인스턴스·앱 세트 ID와 거부 방법을 구체적으로 안내</td>
+</tr>
+<tr>
+<td>보유 및 이전</td>
+<td>통합 항목에서 보관과 이전을 안내</td>
+<td>Firebase 인증 미국 처리와 삭제 일정, Firestore 서울 계획, 서비스별 이전 시점 및 제한을 명시</td>
+</tr>
+<tr>
+<td>권리 행사</td>
+<td>한 항목에서 삭제 및 권리 행사를 안내</td>
+<td>열람청구 담당과 구제기관을 명시하고 요약표와 목차에서 관련 항목으로 연결</td>
+</tr>
+</tbody>
+</table>
+<details id="previous-policy"><summary>이전 개인정보처리방침 (2026년 11월 23일 적용)</summary>
+<div class="markdown-heading"><h2 class="heading-element">Project RECLAIM 개인정보처리방침</h2><a id="user-content-project-reclaim-개인정보처리방침" class="anchor" aria-label="Permalink: Project RECLAIM 개인정보처리방침" href="#project-reclaim-개인정보처리방침"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
 <p>시행일 2026년 11월 23일</p>
 <p>넥소라랩스(Nexora Labs)(이하 운영자)는 Project RECLAIM의 익명 로그인, 클라우드 저장, 서비스 분석, 광고 및 인앱 결제에 필요한 정보를 처리합니다. 개인정보 문의와 데이터 삭제 요청은 <a href="mailto:cs@nexoralabs.io">cs@nexoralabs.io</a>로 접수합니다.</p>
 <div class="markdown-heading"><h2 class="heading-element">처리 항목과 목적</h2><a id="user-content-처리-항목과-목적" class="anchor" aria-label="Permalink: 처리 항목과 목적" href="#처리-항목과-목적"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
@@ -134,6 +497,8 @@ th, td { border: 1px solid #cfd8e3; padding: .55rem; text-align: left; vertical-
 </ul>
 <p>개인정보 침해에 관한 상담과 신고는 <a href="https://privacy.kisa.or.kr/" rel="nofollow">개인정보침해 신고센터</a>에서, 분쟁 조정은 <a href="https://www.kopico.go.kr/" rel="nofollow">개인정보분쟁조정위원회</a>에서 신청할 수 있습니다.</p>
 <p>방침을 바꾸면 이 페이지에 변경 내용과 시행일을 적용 전에 게시합니다. 법령상 동의가 필요한 변경은 별도로 동의를 받습니다.</p>
+
+</details>
 </main>
 </body>
 </html>
